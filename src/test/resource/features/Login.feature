@@ -12,11 +12,20 @@ Feature: Test the login page with and without errors
     Then I successfully logged on
     And I close the browser
 
-    Scenario: Check the login form with wrong password
-      When I click on the link "ZALOGUJ SIĘ"
-      And I populate the entire form
+  Scenario: Check the login form with wrong password
+    When I click on the link "ZALOGUJ SIĘ"
+    And I populate the entire form
         |       Email      |  Password  |
         |muturuzi@gmail.com|  password  |
-      And I submit the login form
-      Then I'm not logged in
-      And I close the browser
+    And I submit the login form
+    Then I'm not logged in
+    And I close the browser
+
+  Scenario: Check the login form with wrong username
+    When I click on the link "ZALOGUJ SIĘ"
+    And I populate the entire form
+      |       Email      |  Password  |
+      |test1234@gmail.com|  test1234  |
+    And I submit the login form
+    Then I'm not logged in
+    And I close the browser

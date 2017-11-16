@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47f07820-c493-4491-8e94-a73884e58d31" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pl/merlin/StepDefinitions.java" afterPath="$PROJECT_DIR$/src/test/java/pl/merlin/StepDefinitions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pl/merlin/pageObjects/LoggedOn.java" afterPath="$PROJECT_DIR$/src/test/java/pl/merlin/pageObjects/LoggedOn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pl/merlin/pageObjects/LoginPage.java" afterPath="$PROJECT_DIR$/src/test/java/pl/merlin/pageObjects/LoginPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resource/features/Login.feature" afterPath="$PROJECT_DIR$/src/test/resource/features/Login.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.merlin.RunnerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.merlin.RunnerTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.merlin.RunnerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/pl.merlin.RunnerTest.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Login.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/resource/features/Login.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+            <state relative-caret-position="288">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -43,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pl/merlin/pageObjects/LoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
@@ -94,9 +88,9 @@
         <option value="$PROJECT_DIR$/src/test/java/pl/merlin/WebDriverFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/merlin/RunnerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/merlin/pageObjects/LoggedOn.java" />
-        <option value="$PROJECT_DIR$/src/test/resource/features/Login.feature" />
         <option value="$PROJECT_DIR$/src/test/java/pl/merlin/StepDefinitions.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/merlin/pageObjects/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/resource/features/Login.feature" />
       </list>
     </option>
   </component>
@@ -570,14 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resource/features/Login.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/merlin/StepDefinitions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -606,6 +592,14 @@
             <element signature="e#829#830#0" expanded="true" />
             <element signature="e#920#921#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resource/features/Login.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

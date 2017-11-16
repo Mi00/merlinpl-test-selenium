@@ -11,5 +11,4 @@ import org.junit.runner.RunWith;
         features = "src/test/resource/features"
 )
 public class RunnerTest {
-
 }

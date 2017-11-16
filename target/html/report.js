@@ -13,9 +13,11 @@ formatter.step({
   "name": "I am on the merlin.pl site",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "StepDefinitions.shouldNavigateToMainPage()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "Check the login form without errors",
@@ -23,43 +25,67 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "I click on the login link",
+  "name": "I click on the link \"ZALOGUJ SIĘ\"",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "StepDefinitions.shouldClickOnTheLink(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "I populate the entire form",
+  "rows": [
+    {
+      "cells": [
+        "Email",
+        "Password"
+      ]
+    },
+    {
+      "cells": [
+        "muturuzi@gmail.com",
+        "test1234"
+      ]
+    }
+  ],
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "StepDefinitions.shouldPopulateTheFormWithValidInformations(DataTable)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "I submit the login form",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "StepDefinitions.shouldSubmitTheForm()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "I successfully  loggen on",
+  "name": "I successfully logged on",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "StepDefinitions.shouldSuccessfullyLogIn()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "I close the browser",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "StepDefinitions.shouldCloseBrowser()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 });

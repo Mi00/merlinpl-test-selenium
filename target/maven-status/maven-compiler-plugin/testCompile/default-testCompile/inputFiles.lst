@@ -1,1 +1,7 @@
 /home/mio/IdeaProjects/merlin-test/src/test/java/pl/merlin/RunnerTest.java
+/home/mio/IdeaProjects/merlin-test/src/test/java/pl/merlin/pageObjects/LandingPage.java
+/home/mio/IdeaProjects/merlin-test/src/test/java/pl/merlin/pageObjects/AbstractPage.java
+/home/mio/IdeaProjects/merlin-test/src/test/java/pl/merlin/StepDefinitions.java
+/home/mio/IdeaProjects/merlin-test/src/test/java/pl/merlin/pageObjects/LoginPage.java
+/home/mio/IdeaProjects/merlin-test/src/test/java/pl/merlin/WebDriverFactory.java
+/home/mio/IdeaProjects/merlin-test/src/test/java/pl/merlin/pageObjects/LoggedOn.java

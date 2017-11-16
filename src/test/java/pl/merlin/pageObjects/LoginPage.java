@@ -26,4 +26,7 @@ public class LoginPage extends AbstractPage{
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return new LoggedOn(driver);
     }
+    public String notLoggedIn(){
+        return driver.findElement(By.className("g-popup__content-error")).getText();
+    }
 }

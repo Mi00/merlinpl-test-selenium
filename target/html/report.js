@@ -88,4 +88,88 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.step({
+  "name": "I am on the merlin.pl site",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldNavigateToMainPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Check the login form with wrong password",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "I click on the link \"ZALOGUJ SIĘ\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickOnTheLink(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I populate the entire form",
+  "rows": [
+    {
+      "cells": [
+        "Email",
+        "Password"
+      ]
+    },
+    {
+      "cells": [
+        "muturuzi@gmail.com",
+        "password"
+      ]
+    }
+  ],
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldPopulateTheFormWithValidInformations(DataTable)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I submit the login form",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldSubmitTheForm()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I\u0027m not logged in",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldNotLoggedIn()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I close the browser",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldCloseBrowser()"
+});
+formatter.result({
+  "status": "passed"
+});
 });

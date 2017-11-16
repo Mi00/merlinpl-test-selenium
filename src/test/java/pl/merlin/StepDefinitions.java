@@ -54,10 +54,13 @@ public class StepDefinitions {
         Assert.assertTrue(loggedOn.checkIsLoggedIn());
     }
 
+    @Then("^I'm not logged in$")
+    public void shouldNotLoggedIn() throws Throwable {
+        Assert.assertEquals(loginPage.notLoggedIn(), "Taki użytkownik nie istnieje albo hasło nieprawidłowe");
+    }
+
     @And("^I close the browser$")
     public void shouldCloseBrowser() throws Exception {
         landingPage.closeDriver();
     }
-
-
 }

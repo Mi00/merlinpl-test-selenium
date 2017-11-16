@@ -9,10 +9,6 @@ public class LoggedOn extends AbstractPage{
         super(driver);
     }
 
-    public String getPageTitle(){
-        return driver.getTitle();
-    }
-
     public boolean checkIsLoggedIn() {
         return driver.findElements(By.xpath("//a[@href='/profile/setting/']")).size() > 0;
     }

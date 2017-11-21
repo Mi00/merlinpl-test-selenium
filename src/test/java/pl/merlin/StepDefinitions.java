@@ -8,9 +8,11 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.junit.Before;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import pl.merlin.pageObjects.CartPage;
 import pl.merlin.pageObjects.LandingPage;
 import pl.merlin.pageObjects.LoggedOn;
 import pl.merlin.pageObjects.LoginPage;
@@ -24,6 +26,8 @@ public class StepDefinitions {
     LandingPage landingPage;
     LoginPage loginPage;
     LoggedOn loggedOn;
+    CartPage cartpage;
+    int itemCount;
 
 
     @Given("^I am on the merlin\\.pl site$")
@@ -65,18 +69,51 @@ public class StepDefinitions {
     }
 
     @When("^I click on button \"([^\"]*)\"$")
-    public void iClickOnButton(String buttonName) throws Throwable {
+    public void shouldClickOnTheAddToCartButton(String buttonName) throws Throwable {
         loggedOn = loggedOn.addToBasket();
 
     }
 
     @Then("^I successfully add item to basket$")
-    public void iSuccessfullyAddItemToBasket() throws Throwable {
+    public void shouldSuccessfullyAddItemToBasket() throws Throwable {
         Assert.assertTrue(loggedOn.checkIsItemAdded());
     }
 
     @And("^I click \"([^\"]*)\" button$")
-    public void iClickButton(String arg0) throws Throwable {
+    public void shouldClickBackToShopButton(String arg0) throws Throwable {
         loggedOn = loggedOn.backToShop();
+    }
+
+    @When("^Check if basket is not empty$")
+    public void checkIfBasketIsNotEmpty() throws Throwable {
+        Assert.assertNotEquals(loggedOn.checkIfCartIsNotEmpty(), "pusty");
+    }
+
+    @And("^Click on the cart link$")
+    public void clickOnTheCartLink() throws Throwable {
+        cartpage = loggedOn.clickOnTheCartButton();
+    }
+
+    @And("^Click on the remove product link$")
+    public void clickOnTheRemoveProductLink() throws Throwable {
+        cartpage = cartpage.clickOnTheRemoveItem();
+    }
+
+    @And("^Product is deleted$")
+    public void productIsDeleted() throws Throwable {
+        int newItemCount = cartpage.checkHowManyItemsAreInBasket();
+        Assert.assertNotEquals(itemCount, newItemCount);
+    }
+
+    @And("^Click on the remove product link until not empty$")
+    public void clickOnTheRemoveProductLinkUntilNotEmpty() throws Throwable {
+        cartpage = cartpage.clickToRemoveAllItemsFromCart();
+    }
+
+
+    @Then("^Check if basket is empty$")
+    public void checkIfBasketIsEmpty() throws Throwable {
+        itemCount = cartpage.checkHowManyItemsAreInBasket();
+        Assert.assertEquals(0, itemCount);
     }
 }

@@ -3,6 +3,11 @@ package pl.merlin.pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class LoggedOn extends AbstractPage{
 
@@ -27,5 +32,14 @@ public class LoggedOn extends AbstractPage{
 
     public boolean checkIsItemAdded(){
         return driver.findElements(By.className("minicart")).size() > 0;
+    }
+
+    public String checkIfCartIsNotEmpty(){
+        return driver.findElement(By.id("header-cart-item-count-text")).getText();
+    }
+
+    public CartPage clickOnTheCartButton(){
+        driver.findElement(By.id("header-cart-item-count-text")).click();
+        return new CartPage(driver);
     }
 }

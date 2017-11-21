@@ -29,4 +29,6 @@ public class LoginPage extends AbstractPage{
     public String notLoggedIn(){
         return driver.findElement(By.className("g-popup__content-error")).getText();
     }
+
+
 }

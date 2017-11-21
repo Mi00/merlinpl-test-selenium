@@ -63,4 +63,20 @@ public class StepDefinitions {
     public void shouldCloseBrowser() throws Exception {
         landingPage.closeDriver();
     }
+
+    @When("^I click on button \"([^\"]*)\"$")
+    public void iClickOnButton(String buttonName) throws Throwable {
+        loggedOn = loggedOn.addToBasket();
+
+    }
+
+    @Then("^I successfully add item to basket$")
+    public void iSuccessfullyAddItemToBasket() throws Throwable {
+        Assert.assertTrue(loggedOn.checkIsItemAdded());
+    }
+
+    @And("^I click \"([^\"]*)\" button$")
+    public void iClickButton(String arg0) throws Throwable {
+        loggedOn = loggedOn.backToShop();
+    }
 }

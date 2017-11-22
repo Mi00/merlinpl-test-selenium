@@ -116,4 +116,9 @@ public class StepDefinitions {
         itemCount = cartpage.checkHowManyItemsAreInBasket();
         Assert.assertEquals(0, itemCount);
     }
+
+    @Then("^I successfully log out$")
+    public void iSuccessfullyLogOut() throws Throwable {
+        Assert.assertEquals(loggedOn.checkIsLoggedOut(), "CZEŚĆ, ZALOGUJ SIĘ");
+    }
 }

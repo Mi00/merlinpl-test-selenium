@@ -42,4 +42,8 @@ public class LoggedOn extends AbstractPage{
         driver.findElement(By.id("header-cart-item-count-text")).click();
         return new CartPage(driver);
     }
+
+    public String checkIsLoggedOut(){
+        return driver.findElement(By.xpath("//div[2]/header/div[1]/div/ul/li[1]/a")).getText();
+    }
 }

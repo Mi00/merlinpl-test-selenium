@@ -806,8 +806,7 @@ formatter.match({
   "location": "StepDefinitions.checkIfBasketIsEmpty()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected:\u003c0\u003e but was:\u003c1\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat pl.merlin.StepDefinitions.checkIfBasketIsEmpty(StepDefinitions.java:117)\n\tat ✽.Check if basket is empty(src/test/resource/features/Scenario2/Basket.feature:44)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "I close the browser",
@@ -817,7 +816,7 @@ formatter.match({
   "location": "StepDefinitions.shouldCloseBrowser()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.uri("src/test/resource/features/Scenario3/Logout.feature");
 formatter.feature({
@@ -1014,25 +1013,14 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click on the \"WYLOGUJ\"",
+  "name": "I check if there is option to logout",
   "keyword": "And "
 });
 formatter.match({
-  "location": "StepDefinitions.iClickOnThe(String)"
+  "location": "StepDefinitions.iCheckIfThereIsOptionToLogout()"
 });
 formatter.result({
   "status": "passed"
-});
-formatter.step({
-  "name": "Im still logged in",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "StepDefinitions.imStillLoggedIn()"
-});
-formatter.result({
-  "error_message": "java.lang.AssertionError: expected:\u003cfalse\u003e but was:\u003ctrue\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat pl.merlin.StepDefinitions.imStillLoggedIn(StepDefinitions.java:152)\n\tat ✽.Im still logged in(src/test/resource/features/Scenario3/Logout.feature:20)\n",
-  "status": "failed"
 });
 formatter.step({
   "name": "I close the browser",
@@ -1042,6 +1030,6 @@ formatter.match({
   "location": "StepDefinitions.shouldCloseBrowser()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 });

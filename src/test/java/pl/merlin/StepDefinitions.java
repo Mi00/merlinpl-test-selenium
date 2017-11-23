@@ -96,13 +96,13 @@ public class StepDefinitions {
 
     @And("^Click on the remove product link$")
     public void clickOnTheRemoveProductLink() throws Throwable {
+        itemCount = cartpage.checkHowManyItemsAreInBasket();
         cartpage = cartpage.clickOnTheRemoveItem();
     }
 
     @And("^Product is deleted$")
     public void productIsDeleted() throws Throwable {
-        int newItemCount = cartpage.checkHowManyItemsAreInBasket();
-        Assert.assertEquals(newItemCount, 0);
+        Assert.assertTrue(cartpage.isCartEmpty());
     }
 
     @And("^Click on the remove product link until not empty$")
@@ -113,8 +113,7 @@ public class StepDefinitions {
 
     @Then("^Check if basket is empty$")
     public void checkIfBasketIsEmpty() throws Throwable {
-        itemCount = cartpage.checkHowManyItemsAreInBasket();
-        Assert.assertEquals(0, itemCount);
+        Assert.assertTrue(cartpage.isCartEmpty());
     }
 
     @Then("^I successfully log out$")

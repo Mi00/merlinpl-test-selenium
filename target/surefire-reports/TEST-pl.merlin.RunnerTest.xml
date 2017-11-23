@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="2" name="pl.merlin.RunnerTest" time="149.853" errors="0" skipped="0">
+<testsuite tests="9" failures="0" name="pl.merlin.RunnerTest" time="117.714" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -63,86 +63,13 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Test the login page with and without errors" name="Check the login form without errors" time="15.973"/>
-  <testcase classname="Test the login page with and without errors" name="Check the login form with wrong password" time="7.424"/>
-  <testcase classname="Test the login page with and without errors" name="Check the login form with wrong username" time="6.995"/>
-  <testcase classname="Test basket functionality. Add/remove item, clear basket." name="Successfully add &quot;item&quot; to basket" time="11.173"/>
-  <testcase classname="Test basket functionality. Add/remove item, clear basket." name="Successfully remove item from basket" time="21.224"/>
-  <testcase classname="Test basket functionality. Add/remove item, clear basket." name="Successfully add several items to basket" time="19.561"/>
-  <testcase classname="Test basket functionality. Add/remove item, clear basket." name="Clear the basket" time="24.497">
-    <failure message="expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:645)
-	at org.junit.Assert.assertEquals(Assert.java:631)
-	at pl.merlin.StepDefinitions.checkIfBasketIsEmpty(StepDefinitions.java:117)
-	at ✽.Check if basket is empty(src/test/resource/features/Scenario2/Basket.feature:44)
-</failure>
-    <system-out>
-  Background:                              &amp;#27;[90m# src/test/resource/features/Scenario2/Basket.feature:3&amp;#27;[0m
-    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on the merlin.pl site&amp;#27;[0m       &amp;#27;[90m# StepDefinitions.shouldNavigateToMainPage()&amp;#27;[0m
-    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI click on the link &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mZALOGUJ SIĘ&amp;#27;[0m&amp;#27;[32m&quot;&amp;#27;[0m &amp;#27;[90m# StepDefinitions.shouldClickOnTheLink(String)&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI populate the entire form&amp;#27;[0m         &amp;#27;[90m# StepDefinitions.shouldPopulateTheFormWithValidInformations(DataTable)&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI submit the login form&amp;#27;[0m            &amp;#27;[90m# StepDefinitions.shouldSubmitTheForm()&amp;#27;[0m
-    &amp;#27;[32mThen &amp;#27;[0m&amp;#27;[32mI successfully logged on&amp;#27;[0m          &amp;#27;[90m# StepDefinitions.shouldSuccessfullyLogIn()&amp;#27;[0m
-
-  Scenario: Clear the basket                             &amp;#27;[90m# src/test/resource/features/Scenario2/Basket.feature:40&amp;#27;[0m
-    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mCheck if basket is not empty&amp;#27;[0m                    &amp;#27;[90m# StepDefinitions.checkIfBasketIsNotEmpty()&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mClick on the cart link&amp;#27;[0m                           &amp;#27;[90m# StepDefinitions.clickOnTheCartLink()&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mClick on the remove product link until not empty&amp;#27;[0m &amp;#27;[90m# StepDefinitions.clickOnTheRemoveProductLinkUntilNotEmpty()&amp;#27;[0m
-    &amp;#27;[31mThen &amp;#27;[0m&amp;#27;[31mCheck if basket is empty&amp;#27;[0m                        &amp;#27;[90m# StepDefinitions.checkIfBasketIsEmpty()&amp;#27;[0m
-      &amp;#27;[31mjava.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:645)
-	at org.junit.Assert.assertEquals(Assert.java:631)
-	at pl.merlin.StepDefinitions.checkIfBasketIsEmpty(StepDefinitions.java:117)
-	at ✽.Check if basket is empty(src/test/resource/features/Scenario2/Basket.feature:44)
-&amp;#27;[0m
-    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI close the browser&amp;#27;[0m                              &amp;#27;[90m# StepDefinitions.shouldCloseBrowser()&amp;#27;[0m
-</system-out>
-    <system-err>Starting ChromeDriver 2.33.506092 (733a02544d189eeb751fe0d7ddca79a0ee28cce4) on port 2140
-Only local connections are allowed.
-Nov 23, 2017 1:02:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-</system-err>
-  </testcase>
-  <testcase classname="Log out with and without errors" name="Log out without errors" time="15.457"/>
-  <testcase classname="Log out with and without errors" name="Log out with failure" time="27.549">
-    <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at pl.merlin.StepDefinitions.imStillLoggedIn(StepDefinitions.java:152)
-	at ✽.Im still logged in(src/test/resource/features/Scenario3/Logout.feature:20)
-</failure>
-    <system-out>
-  Background:                              &amp;#27;[90m# src/test/resource/features/Scenario3/Logout.feature:3&amp;#27;[0m
-    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI am on the merlin.pl site&amp;#27;[0m       &amp;#27;[90m# StepDefinitions.shouldNavigateToMainPage()&amp;#27;[0m
-    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI click on the link &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mZALOGUJ SIĘ&amp;#27;[0m&amp;#27;[32m&quot;&amp;#27;[0m &amp;#27;[90m# StepDefinitions.shouldClickOnTheLink(String)&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI populate the entire form&amp;#27;[0m         &amp;#27;[90m# StepDefinitions.shouldPopulateTheFormWithValidInformations(DataTable)&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI submit the login form&amp;#27;[0m            &amp;#27;[90m# StepDefinitions.shouldSubmitTheForm()&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI successfully logged on&amp;#27;[0m           &amp;#27;[90m# StepDefinitions.shouldSuccessfullyLogIn()&amp;#27;[0m
-
-  Scenario: Log out with failure &amp;#27;[90m# src/test/resource/features/Scenario3/Logout.feature:17&amp;#27;[0m
-    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI scroll down page&amp;#27;[0m      &amp;#27;[90m# StepDefinitions.iScrollDownPage()&amp;#27;[0m
-    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI click on the &quot;&amp;#27;[0m&amp;#27;[32m&amp;#27;[1mWYLOGUJ&amp;#27;[0m&amp;#27;[32m&quot;&amp;#27;[0m &amp;#27;[90m# StepDefinitions.iClickOnThe(String)&amp;#27;[0m
-    &amp;#27;[31mAnd &amp;#27;[0m&amp;#27;[31mIm still logged in&amp;#27;[0m       &amp;#27;[90m# StepDefinitions.imStillLoggedIn()&amp;#27;[0m
-      &amp;#27;[31mjava.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at pl.merlin.StepDefinitions.imStillLoggedIn(StepDefinitions.java:152)
-	at ✽.Im still logged in(src/test/resource/features/Scenario3/Logout.feature:20)
-&amp;#27;[0m
-    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI close the browser&amp;#27;[0m      &amp;#27;[90m# StepDefinitions.shouldCloseBrowser()&amp;#27;[0m
-</system-out>
-    <system-err>Starting ChromeDriver 2.33.506092 (733a02544d189eeb751fe0d7ddca79a0ee28cce4) on port 4233
-Only local connections are allowed.
-Nov 23, 2017 1:02:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-</system-err>
-  </testcase>
+  <testcase classname="Test the login page with and without errors" name="Check the login form without errors" time="11.091"/>
+  <testcase classname="Test the login page with and without errors" name="Check the login form with wrong password" time="6.342"/>
+  <testcase classname="Test the login page with and without errors" name="Check the login form with wrong username" time="6.404"/>
+  <testcase classname="Test basket functionality. Add/remove item, clear basket." name="Successfully add &quot;item&quot; to basket" time="12.605"/>
+  <testcase classname="Test basket functionality. Add/remove item, clear basket." name="Successfully remove item from basket" time="14.846"/>
+  <testcase classname="Test basket functionality. Add/remove item, clear basket." name="Successfully add several items to basket" time="19.052"/>
+  <testcase classname="Test basket functionality. Add/remove item, clear basket." name="Clear the basket" time="21.013"/>
+  <testcase classname="Log out with and without errors" name="Log out without errors" time="16.482"/>
+  <testcase classname="Log out with and without errors" name="Log out with failure" time="9.879"/>
 </testsuite>

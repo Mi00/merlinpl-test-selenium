@@ -20,14 +20,13 @@ public class CartPage extends AbstractPage{
         return new CartPage(driver);
     }
 
-    public CartPage clickToRemoveAllItemsFromCart(){
+    public CartPage clickToRemoveAllItemsFromCart() throws InterruptedException {
         List<WebElement> links = driver.findElements(By.cssSelector("li.b_cart-item.cart__item.grid__row"));
         int n = links.size();
 
         for (int i=n; i>0;i--){
-            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             driver.findElement(By.cssSelector("a.btn_action.delete.button--link-green")).click();
-            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+            Thread.sleep(500);
             driver.navigate().refresh();
         }
         return new CartPage(driver);
@@ -36,5 +35,8 @@ public class CartPage extends AbstractPage{
     public int checkHowManyItemsAreInBasket() {
         driver.navigate().refresh();
         return driver.findElements(By.cssSelector("li.b_cart-item.cart__item.grid__row")).size();
+    }
+    public boolean isCartEmpty(){
+        return driver.findElements(By.cssSelector("h2.cart__text-empty")).size() > 0;
     }
 }

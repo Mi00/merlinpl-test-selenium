@@ -16,7 +16,7 @@ public class CartPage extends AbstractPage{
 
     public CartPage clickOnTheRemoveItem(){
         driver.findElement(By.cssSelector("a.btn_action.delete.button--link-green")).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         return new CartPage(driver);
     }
 
@@ -25,6 +25,7 @@ public class CartPage extends AbstractPage{
         int n = links.size();
 
         for (int i=n; i>0;i--){
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             driver.findElement(By.cssSelector("a.btn_action.delete.button--link-green")).click();
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             driver.navigate().refresh();

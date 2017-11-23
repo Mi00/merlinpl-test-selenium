@@ -8,6 +8,7 @@ public class AbstractPage {
 
     public AbstractPage(WebDriver driver){
         this.driver = driver;
+        this.driver.manage().window().maximize();
     }
 
     public LandingPage navigateToWebApp() {

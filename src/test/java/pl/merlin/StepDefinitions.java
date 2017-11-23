@@ -102,7 +102,7 @@ public class StepDefinitions {
     @And("^Product is deleted$")
     public void productIsDeleted() throws Throwable {
         int newItemCount = cartpage.checkHowManyItemsAreInBasket();
-        Assert.assertNotEquals(itemCount, newItemCount);
+        Assert.assertEquals(newItemCount, 0);
     }
 
     @And("^Click on the remove product link until not empty$")
@@ -130,5 +130,25 @@ public class StepDefinitions {
     @And("^I click search by name \"([^\"]*)\"$")
     public void iClickSearchByName(String name) throws Throwable {
         loggedOn = loggedOn.searchTheItem(name);
+    }
+
+    @When("^I scroll down page$")
+    public void iScrollDownPage() throws Throwable {
+        loggedOn = loggedOn.scrollDownPage();
+    }
+
+    @Then("^I fail to log out$")
+    public void iFailToLogOut() throws Throwable {
+        Assert.assertNotEquals(loggedOn.checkIsLoggedOut(), "CZEŚĆ, ZALOGUJ SIĘ");
+    }
+
+    @When("^I click on the \"([^\"]*)\"$")
+    public void iClickOnThe(String name) throws Throwable {
+        loggedOn = loggedOn.logOut(name);
+    }
+
+    @And("^I check if there is option to logout$")
+    public void iCheckIfThereIsOptionToLogout() throws Throwable {
+        Assert.assertEquals(true, loggedOn.checkIfOptionLogOutIsVisible());
     }
 }

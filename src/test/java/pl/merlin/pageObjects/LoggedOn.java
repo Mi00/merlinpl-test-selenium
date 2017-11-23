@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Iterator;
 import java.util.List;
@@ -49,6 +51,7 @@ public class LoggedOn extends AbstractPage{
     }
 
     public LoggedOn clickOnTheCategory(String category){
+        ((JavascriptExecutor)driver).executeScript("scroll(0, -600)");
         driver.findElement(By.id("sub-menu-main_submenu")).findElement(By.linkText(category)).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return new LoggedOn(driver);
@@ -58,5 +61,25 @@ public class LoggedOn extends AbstractPage{
         driver.findElement(By.id("search_header")).sendKeys(name);
         driver.findElement(By.id("search-submit-header")).click();
         return new LoggedOn(driver);
+    }
+
+    public LoggedOn scrollDownPage(){
+        ((JavascriptExecutor)driver).executeScript("scroll(0, 600)");
+        return new LoggedOn(driver);
+    }
+
+    public LoggedOn logOut(String name){
+        driver.findElement(By.cssSelector("a[href*='logout']")).click();
+        return new LoggedOn(driver);
+    }
+
+    public boolean checkIfOptionLogOutIsVisible(){
+        WebElement element = driver.findElement(By.cssSelector("div.b-header-main.fixed"));
+        if(element.isDisplayed()){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

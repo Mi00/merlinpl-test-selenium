@@ -1,4 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: pl.merlin.RunnerTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 123.648 sec
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 150.202 sec <<< FAILURE!
+Clear the basket(Test basket functionality. Add/remove item, clear basket.)  Time elapsed: 24.497 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at pl.merlin.StepDefinitions.checkIfBasketIsEmpty(StepDefinitions.java:117)
+	at ✽.Check if basket is empty(src/test/resource/features/Scenario2/Basket.feature:44)
+
+Log out with failure(Log out with and without errors)  Time elapsed: 27.549 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<false> but was:<true>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at pl.merlin.StepDefinitions.imStillLoggedIn(StepDefinitions.java:152)
+	at ✽.Im still logged in(src/test/resource/features/Scenario3/Logout.feature:20)
+

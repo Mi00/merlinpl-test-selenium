@@ -570,6 +570,200 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
+  "name": "Successfully add several items to basket",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "I click on button \"do koszyka\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickOnTheAddToCartButton(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I successfully add item to basket",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldSuccessfullyAddItemToBasket()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click \"back to shop\" button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickBackToShopButton(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click category \"Gry\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.iClickCategory(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on button \"do koszyka\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickOnTheAddToCartButton(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I successfully add item to basket",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldSuccessfullyAddItemToBasket()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click \"back to shop\" button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickBackToShopButton(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click search by name \"film\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.iClickSearchByName(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on button \"do koszyka\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickOnTheAddToCartButton(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I successfully add item to basket",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldSuccessfullyAddItemToBasket()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click \"back to shop\" button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickBackToShopButton(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I close the browser",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldCloseBrowser()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.step({
+  "name": "I am on the merlin.pl site",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldNavigateToMainPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on the link \"ZALOGUJ SIĘ\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickOnTheLink(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I populate the entire form",
+  "rows": [
+    {
+      "cells": [
+        "Email",
+        "Password"
+      ]
+    },
+    {
+      "cells": [
+        "muturuzi@gmail.com",
+        "test1234"
+      ]
+    }
+  ],
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldPopulateTheFormWithValidInformations(DataTable)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I submit the login form",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldSubmitTheForm()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I successfully logged on",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldSuccessfullyLogIn()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
   "name": "Clear the basket",
   "description": "",
   "keyword": "Scenario"
@@ -612,7 +806,8 @@ formatter.match({
   "location": "StepDefinitions.checkIfBasketIsEmpty()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: expected:\u003c0\u003e but was:\u003c1\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat pl.merlin.StepDefinitions.checkIfBasketIsEmpty(StepDefinitions.java:117)\n\tat ✽.Check if basket is empty(src/test/resource/features/Scenario2/Basket.feature:44)\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "I close the browser",
@@ -622,7 +817,7 @@ formatter.match({
   "location": "StepDefinitions.shouldCloseBrowser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.uri("src/test/resource/features/Scenario3/Logout.feature");
 formatter.feature({
@@ -705,11 +900,11 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "I click on the link \"WYLOGUJ\"",
+  "name": "I click on the \"WYLOGUJ\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "StepDefinitions.shouldClickOnTheLink(String)"
+  "location": "StepDefinitions.iClickOnThe(String)"
 });
 formatter.result({
   "status": "passed"
@@ -733,5 +928,120 @@ formatter.match({
 });
 formatter.result({
   "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.step({
+  "name": "I am on the merlin.pl site",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldNavigateToMainPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on the link \"ZALOGUJ SIĘ\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldClickOnTheLink(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I populate the entire form",
+  "rows": [
+    {
+      "cells": [
+        "Email",
+        "Password"
+      ]
+    },
+    {
+      "cells": [
+        "muturuzi@gmail.com",
+        "test1234"
+      ]
+    }
+  ],
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldPopulateTheFormWithValidInformations(DataTable)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I submit the login form",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldSubmitTheForm()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I successfully logged on",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldSuccessfullyLogIn()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Log out with failure",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "I scroll down page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDefinitions.iScrollDownPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on the \"WYLOGUJ\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.iClickOnThe(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Im still logged in",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.imStillLoggedIn()"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError: expected:\u003cfalse\u003e but was:\u003ctrue\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat pl.merlin.StepDefinitions.imStillLoggedIn(StepDefinitions.java:152)\n\tat ✽.Im still logged in(src/test/resource/features/Scenario3/Logout.feature:20)\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "I close the browser",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefinitions.shouldCloseBrowser()"
+});
+formatter.result({
+  "status": "skipped"
 });
 });

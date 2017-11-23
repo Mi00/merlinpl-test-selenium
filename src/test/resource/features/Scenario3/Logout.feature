@@ -10,6 +10,11 @@ Feature: Log out with and without errors
     And I successfully logged on
 
   Scenario: Log out without errors
-    When I click on the link "WYLOGUJ"
+    When I click on the "WYLOGUJ"
     Then I successfully log out
+    And I close the browser
+
+  Scenario: Log out with failure
+    When I scroll down page
+    And I check if there is option to logout
     And I close the browser

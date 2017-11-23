@@ -121,4 +121,14 @@ public class StepDefinitions {
     public void iSuccessfullyLogOut() throws Throwable {
         Assert.assertEquals(loggedOn.checkIsLoggedOut(), "CZEŚĆ, ZALOGUJ SIĘ");
     }
+
+    @And("^I click category \"([^\"]*)\"$")
+    public void iClickCategory(String category) throws Throwable {
+        loggedOn = loggedOn.clickOnTheCategory(category);
+    }
+
+    @And("^I click search by name \"([^\"]*)\"$")
+    public void iClickSearchByName(String name) throws Throwable {
+        loggedOn = loggedOn.searchTheItem(name);
+    }
 }

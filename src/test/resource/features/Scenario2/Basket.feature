@@ -23,6 +23,19 @@ Feature: Test basket functionality. Add/remove item, clear basket.
     Then Product is deleted
     And I close the browser
 
+  Scenario: Successfully add several items to basket
+    When I click on button "do koszyka"
+    And I successfully add item to basket
+    And I click "back to shop" button
+    And I click category "Gry"
+    And I click on button "do koszyka"
+    And I successfully add item to basket
+    And I click "back to shop" button
+    And I click search by name "film"
+    And I click on button "do koszyka"
+    And I successfully add item to basket
+    And I click "back to shop" button
+    Then I close the browser
 
   Scenario: Clear the basket
     When Check if basket is not empty

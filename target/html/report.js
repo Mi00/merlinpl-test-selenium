@@ -612,8 +612,7 @@ formatter.match({
   "location": "StepDefinitions.checkIfBasketIsEmpty()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected:\u003c0\u003e but was:\u003c2\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat pl.merlin.StepDefinitions.checkIfBasketIsEmpty(StepDefinitions.java:117)\n\tat ✽.Check if basket is empty(src/test/resource/features/Scenario2/Basket.feature:31)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "I close the browser",
@@ -623,7 +622,7 @@ formatter.match({
   "location": "StepDefinitions.shouldCloseBrowser()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.uri("src/test/resource/features/Scenario3/Logout.feature");
 formatter.feature({

@@ -20,8 +20,9 @@ public class LoggedOn extends AbstractPage{
     }
 
     public LoggedOn addToBasket(){
-        ((JavascriptExecutor)driver).executeScript("scroll(0, 1000)");
+        ((JavascriptExecutor)driver).executeScript("scroll(0, 600)");
         driver.findElement(By.xpath("//button[contains(text(), 'do koszyka')]")).click();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         return new LoggedOn(driver);
     }
 
@@ -45,5 +46,17 @@ public class LoggedOn extends AbstractPage{
 
     public String checkIsLoggedOut(){
         return driver.findElement(By.xpath("//div[2]/header/div[1]/div/ul/li[1]/a")).getText();
+    }
+
+    public LoggedOn clickOnTheCategory(String category){
+        driver.findElement(By.id("sub-menu-main_submenu")).findElement(By.linkText(category)).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        return new LoggedOn(driver);
+    }
+
+    public LoggedOn searchTheItem(String name){
+        driver.findElement(By.id("search_header")).sendKeys(name);
+        driver.findElement(By.id("search-submit-header")).click();
+        return new LoggedOn(driver);
     }
 }
